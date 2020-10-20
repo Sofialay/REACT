@@ -1,0 +1,91 @@
+.bg-blur {
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(4px);
+    width: 100vw;
+    height: 100vh;
+    transition: 1s ease-in-out;
+}
+
+.modal {
+    text-align: center;
+    width: 600px;
+    background:  #ffaeae;
+    z-index: 100;
+    position: fixed;
+    left: calc(50vw - 300px);
+    top: 10vw;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 1s ease-in-out; //no me funciona el transition para aparecer y desaparecer
+    .modal-button-x {
+        position: absolute;
+        right: 15px;
+        border-radius: 50%;
+        color: white;
+        background-color: #ffaeae;
+        border: none;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2 {
+            // color: #292929;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #292929;
+        }
+
+        input {
+            height: 20px;
+            border: none;
+            width: 200px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 15px;
+            &:focus{
+                outline: rgb(211, 211, 211);
+            }
+        }
+        .modal-buttons {
+            .btn-save {
+                margin-right: 5px;
+                border-radius: 5px;
+                background-color: rgb(16, 190, 161);
+                color: white;
+                cursor: pointer;
+                border: rgb(20, 182, 155);
+                padding: 5px;
+                font-weight: 500;
+                &:focus {
+                    outline:rgb(15, 156, 133) ;
+                }
+            }
+            .btn-close {
+                margin-right: 5px;
+                border-radius: 5px;
+                background-color: rgb(241, 76, 98);
+                color: white;
+                cursor: pointer;
+                border: rgb(216, 65, 85);
+                padding: 5px;
+                font-weight: 500;
+                &:focus {
+                    outline: rgb(214, 60, 81);
+                }
+            }
+        }
+    }
+}

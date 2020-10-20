@@ -9,8 +9,9 @@ body {
   box-sizing: border-box;
   background-color: #EBF2FF;
   align-items: center;
+  position: relative;
 }
 
-h1, h2, h3, div, span, button, section {
+h1, h2, h3, div, span, button, section, p {
   margin: 0;
 }
