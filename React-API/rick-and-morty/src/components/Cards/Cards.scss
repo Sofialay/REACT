@@ -1,0 +1,100 @@
+//reemplazar los colores por variables.
+.card {
+    width: 210px;
+    height: 320px;
+    background-color: #F3FBFB;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+    margin: 30px;
+    .card-img {
+        img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+    }
+    .card-article {
+        .card-article-name {
+            color: #584255;
+            font-weight: 800;
+            font-size: larger;
+        }
+        .card-article-species-and-status {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            .card-article-species {
+                h5 {
+                    font-weight: normal;
+                    color: #584255;
+                    margin-bottom: 5px;
+                }
+                p {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 70px;
+                    height: 20px;
+                    background-color: #68E4BC;
+                    color: #F3FBFB;
+                    font-size: 14px;
+                    &:hover {
+                        transition: all 0.2s ease-in-out;
+                        color: #68E4BC;
+                        background-color: #F3FBFB;
+                        border: 2px solid #68E4BC;
+                    }
+                }
+            }
+            .card-article-status {
+                h5 {
+                    font-weight: normal;
+                    color: #584255;
+                    margin-bottom: 5px;
+                }
+                p {
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 70px;
+                    height: 20px;
+                    background-color:  #FF6A95;
+                    color: #F3FBFB;
+                    font-size: 14px;
+                    &:hover {
+                        transition: all 0.2s ease-in-out;
+                        color: #FF6A95;
+                        background-color: #F3FBFB;
+                        border: 2px solid #FF6A95;
+                    }
+                }
+            }
+        }
+        .card-article-location {
+            text-align: center;
+            h5 {
+                font-weight: normal;
+                color: #584255;
+                margin: 5px 0;
+            }
+            p { 
+                border-radius: 5px;
+                padding: 5px 0;
+                width: 100%;
+                height: 40px;
+                background-color: #51A1E4;
+                color: #F3FBFB;
+                font-size: 14px;
+                &:hover {
+                    transition: all 0.2s ease-in-out;
+                    color: #51A1E4;
+                    background-color: #F3FBFB;
+                    border: 2px solid #51A1E4;
+                }
+            }
+        }
+    }
+}
