@@ -1,12 +1,6 @@
-import React, {useState, useContext, useReducer, useEffect} from 'react';
-// import {getData} from './data/Data';
-// import {INIT, reducer} from './Components/reducer/Reducer';
-// import Data from './data/Data';
+import React from 'react';
 import CarouselCards from './Components/Carousel/CarouselCards';
 import Header from './Components/Header/Header';
-import Context from './Components/context/Context';
-import Reducer from './Components/reducer/Reducer';
-
 import './App.scss';
 
 //TO DO'S
@@ -21,13 +15,12 @@ import './App.scss';
 
 function App() {
 
-
-
   return (
-  //  <Context.Provider value={{images, dispatchImg}}>
+  <React.Fragment>
+    <Header/>
     <CarouselCards />
-  // </Context.Provider>
-  );
+  </React.Fragment>
+  )
 }
 
 export default App;

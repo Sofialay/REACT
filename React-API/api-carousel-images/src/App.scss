@@ -1,9 +1,16 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 
 body {
     background-color: #e3e1de;
     overflow: hidden;
     position: relative;
-    font-family: 'Mulish', sans-serif;;
+    font-family: 'Mulish', sans-serif;
+}
+
+h1, h2, h3, p, div, span, section {
+    box-sizing: border-box;
+    margin: 0;
 }
