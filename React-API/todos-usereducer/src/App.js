@@ -19,7 +19,6 @@ function App() {
        null
      }
       <TodoPage />
-
     </UserTitleContext.Provider>
   );
 }

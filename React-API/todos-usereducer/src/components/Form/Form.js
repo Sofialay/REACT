@@ -12,11 +12,11 @@ import './Form.scss';
 const Form = () => {
     const {titleUser} = useContext(UserTitleContext);
     const {task, setTask, todos, dispatch} = useContext(TodoContext);
-    const [displayEditInput, setDisplayEditInput] = useState(false);
+    const [displayEditInput, setDisplayEditInput] = useState(false); //no debe ser solo un booleano
     const [newTask, setNewTask] = useState("");
 
 
-    const changeTask = (event) => setNewTask(event.target.value) //cambie esto
+    const changeTask = (event) => setNewTask(event.target.value);
 
 
     //add task
@@ -27,11 +27,17 @@ const Form = () => {
       }
 
 
-      //edit task
-      const editTodo = (e) => {
-        // setSelectedTodo(e.target.id)
-        setDisplayEditInput(!displayEditInput);
-      }
+      //edit only ONE task
+      const editTodo = (id) => {
+        
+    //     let newDisplay = {
+    //         id: newTODO.id, //crear funcion de newTodo
+    //         display: false
+    //     }
+
+    displayEditInput(true);
+}
+    
 
       const handleEditTodo = (e) => {
         dispatch({type: TODO_EDIT, payload: {todos, newTask: newTask, editedId: e.target.id}}) //cambie newTask
@@ -50,9 +56,6 @@ const Form = () => {
         dispatch({type: TODO_DELETE, payload:{id: e.target.id}})
       }
 
-      //añadir otro EditInput que me permita a penas cuando entro a la pagina pedir el nombre de la persona
-      //luego ese nombre usarlo para el title del contenedor de to do's
-
     return (
         <React.Fragment>
             <section className="title-and-sub">
@@ -69,28 +72,29 @@ const Form = () => {
 
             <div className="content-todos">
             {
-                todos.map(todo => { 
+                todos.map((todo, indexTodo) => { 
                     return(
                         <div key={todo.id} className="todo-info">
                             <input type="checkbox" /> 
                              {/*defaultChecked={todo.checked} onChange={e => setChecked(todo, e.target.checked)} */}
                             {
                             displayEditInput ? 
+                            // esto hay que refactorizar a un array de objetos con un display 
+                            //asi poder hacer displayEditInput[x].display
 
                             <input 
                             id={todo.id}
                             type="text" 
                             defaultValue={todo.task} 
                             onKeyDown={_handleKeyDown} 
-                            onChange={changeTask} //cambie esto
+                            onChange={changeTask} 
                             /> 
                             : 
                             <p>{todo.task}</p>
                             }
-                            <button id={todo.id} className="btn-edit" onClick={editTodo}><FontAwesomeIcon icon={faEdit} /></button>
+                            <button id={todo.id} className="btn-edit" onClick={editTodo(todo.id)}><FontAwesomeIcon icon={faEdit} /></button>
                             <button id={todo.id} className="btn-delete" onClick={deleteTodo}><FontAwesomeIcon icon={faTrash} /></button>
                         </div>
-
                     )
                 })
             }
