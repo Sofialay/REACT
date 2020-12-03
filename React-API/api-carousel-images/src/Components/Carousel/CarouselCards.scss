@@ -1,7 +1,7 @@
 .container {
     margin: 0 auto; 
     overflow: hidden;
-    max-width: 460px;
+    max-width: 500px;
     &:after, &:before {
         position: absolute;
         height: 100%;
@@ -12,19 +12,19 @@
         z-index: 1;
     }
     &:before {
-        left: 500px;
+        left: 480px;
         background: linear-gradient(to right, #e3e1de, rgba(255, 255, 255, 0));
     }
     &:after{
-        right: 520px;
+        right: 485px;
         background: linear-gradient(to left, #e3e1de, rgba(255, 255, 255, 0));
     }
     .container-slider {
         display: flex;
-        justify-content: flex-start;
         transition: transform 0.2s linear;
     }
     .container-img {
+        position: relative;
         margin: 8px;
         text-align: center;
         border-radius: 5px;
@@ -32,54 +32,59 @@
         border: 2px solid #c5c6c8;
         img{
             height: 550px;
-            z-index: 2;
+            z-index: 1;
+        }
+        p {
+            color: #333;
+            padding: 2px 15px;
+            letter-spacing: 0.2mm;
         }
     }
+}
 
 
 .btn-prev{
+    cursor: pointer;
     position: absolute;
-    background-color: #46a29f;
-    color: white;
     top: 35vh;
-    border-radius: 100px;
-    border: none;
+    left: 30vw;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+    border: none;
     font-size: 20px;
     text-align: center;
-    left: 470px;
-    z-index: 5;
-    cursor: pointer;
+    z-index: 3;
+    font-size: 30px;
+    background-color: #e3e1de;
     &:focus {
         outline: #398582;
     }
     &:hover {
-        transition: 0.2s all ;
-        background-color: #35817f;
+        transition: 0.1s all ease-in-out;
+        border: 2px solid #35817f;
     }
 }
 .btn-next{
     cursor: pointer;
     position: absolute;
-    background-color: #46a29f;
-    color: white;
-    right: 470px;
+    right: 30vw;
     top: 35vh;
-    border-radius: 100px;
-    border: none;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+    border: none;
     font-size: 20px;
     text-align: center;
-    z-index: 5;
+    z-index: 2;
+    font-size: 30px;
+    background-color: #e3e1de;
     &:focus {
         outline: #256462;
     }
     &:hover {
-        transition: 0.2s all ease-in-out;
-        background-color:  #35817f;
+        transition: 0.1s all ease-in-out;
+        border: 2px solid #35817f;
     }
 }
 
-}

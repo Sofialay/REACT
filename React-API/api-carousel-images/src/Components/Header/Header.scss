@@ -1,0 +1,77 @@
+.header {
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    .title-black {
+        font-size: 65px;
+        margin-top: 5px;
+        background: -webkit-linear-gradient(rgb(10, 10, 10), #e3e1de);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+
+
+.header-info {
+    position: absolute;
+    right: 45px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    .about-me {
+        margin-right: 75px;    
+        background: -webkit-linear-gradient(#38084e, rgb(170, 170, 170));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        letter-spacing: 0.5mm;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+        cursor: pointer;
+        &:after {    
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: rgb(14, 14, 14);
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+          }
+          &:hover:after { 
+            width: 100%; 
+            left: 0; 
+          }
+    }
+
+    .bio {
+        text-align: center;
+        font-size: 10px;
+        font-weight: 300;
+        max-width: 210px;
+        position: absolute;
+        right: 140px;
+        top: 55px;
+    }
+    .btn-contact {
+        border: white;
+        background-color: rgb(27, 27, 27);
+        color: white;
+        font-size: 14px;
+        border-radius: 2px;
+        padding: 10px;
+        letter-spacing: 0.5mm;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+    }
+
+}
